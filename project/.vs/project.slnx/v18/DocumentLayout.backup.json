@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\idb\\core\\class_16\\project\\project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|e:\\idb\\core\\class_16\\project\\project\\project\\views\\adopters\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\views\\adopters\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|e:\\idb\\core\\class_16\\project\\project\\project\\areas\\identity\\pages\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\areas\\identity\\pages\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|e:\\idb\\core\\class_16\\project\\project\\project\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|e:\\idb\\core\\class_16\\project\\project\\project\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|e:\\idb\\core\\class_16\\project\\project\\project\\views\\adopters\\_addnewpet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\views\\adopters\\_addnewpet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|e:\\idb\\core\\class_16\\project\\project\\project\\models\\viewmodels\\adoptervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\models\\viewmodels\\adoptervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|e:\\idb\\core\\class_16\\project\\project\\project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|e:\\idb\\core\\class_16\\project\\project\\project\\viewcomponent\\adoptersummaryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\viewcomponent\\adoptersummaryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|e:\\idb\\core\\class_16\\project\\project\\project\\controllers\\adopterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\controllers\\adopterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "E:\\idb\\core\\class_16\\project\\project\\project\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "project\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "E:\\idb\\core\\class_16\\project\\project\\project\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "project\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T10:41:13.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "E:\\idb\\core\\class_16\\project\\project\\project\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "project\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "ToolTip": "E:\\idb\\core\\class_16\\project\\project\\project\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "project\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T10:41:11.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "E:\\idb\\core\\class_16\\project\\project\\project\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "project\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "E:\\idb\\core\\class_16\\project\\project\\project\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "project\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T10:41:09.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_addNewPet.cshtml",
+              "DocumentMoniker": "E:\\idb\\core\\class_16\\project\\project\\project\\Views\\Adopters\\_addNewPet.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\Adopters\\_addNewPet.cshtml",
+              "ToolTip": "E:\\idb\\core\\class_16\\project\\project\\project\\Views\\Adopters\\_addNewPet.cshtml",
+              "RelativeToolTip": "project\\Views\\Adopters\\_addNewPet.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T10:40:23.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\idb\\core\\class_16\\project\\project\\project\\Views\\Adopters\\Create.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\Adopters\\Create.cshtml",
+              "ToolTip": "E:\\idb\\core\\class_16\\project\\project\\project\\Views\\Adopters\\Create.cshtml",
+              "RelativeToolTip": "project\\Views\\Adopters\\Create.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAADwv3AAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T10:35:52.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdoptersController.cs",
+              "DocumentMoniker": "E:\\idb\\core\\class_16\\project\\project\\project\\Controllers\\AdoptersController.cs",
+              "RelativeDocumentMoniker": "project\\Controllers\\AdoptersController.cs",
+              "ToolTip": "E:\\idb\\core\\class_16\\project\\project\\project\\Controllers\\AdoptersController.cs",
+              "RelativeToolTip": "project\\Controllers\\AdoptersController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAA9wHwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T10:33:27.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdopterVM.cs",
+              "DocumentMoniker": "E:\\idb\\core\\class_16\\project\\project\\project\\Models\\ViewModels\\AdopterVM.cs",
+              "RelativeDocumentMoniker": "project\\Models\\ViewModels\\AdopterVM.cs",
+              "ToolTip": "E:\\idb\\core\\class_16\\project\\project\\project\\Models\\ViewModels\\AdopterVM.cs",
+              "RelativeToolTip": "project\\Models\\ViewModels\\AdopterVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T10:33:21.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\idb\\core\\class_16\\project\\project\\project\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\idb\\core\\class_16\\project\\project\\project\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "project\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAACfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T10:31:29.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdopterSummaryViewComponent.cs",
+              "DocumentMoniker": "E:\\idb\\core\\class_16\\project\\project\\project\\ViewComponent\\AdopterSummaryViewComponent.cs",
+              "RelativeDocumentMoniker": "project\\ViewComponent\\AdopterSummaryViewComponent.cs",
+              "ToolTip": "E:\\idb\\core\\class_16\\project\\project\\project\\ViewComponent\\AdopterSummaryViewComponent.cs",
+              "RelativeToolTip": "project\\ViewComponent\\AdopterSummaryViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T10:31:10.604Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

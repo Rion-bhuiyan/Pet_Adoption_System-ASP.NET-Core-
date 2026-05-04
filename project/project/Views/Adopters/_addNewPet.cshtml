@@ -1,0 +1,10 @@
+﻿@model project.Models.AdoptionEntry
+
+<div class="row mb-2 pet-row align-items-center">
+    <div class="col-10">
+        @Html.DropDownList("petId", (SelectList)ViewBag.petList, "-- Select Pet --", new { @class = "form-select" })
+    </div>
+    <div class="col-2">
+        <button type="button" class="btn btn-outline-danger btn-sm btnDelete">Remove</button>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+﻿@model project.Models.Pet
+@{
+    ViewData["Title"] = "Edit Pet";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-3 overflow-hidden">
+
+                <!-- Header -->
+                <div class="card-header text-white text-center py-4"
+                     style="background: linear-gradient(135deg, #00c6ff, #0072ff);">
+                    <h2 class="mb-0 fw-bold">Edit Pet</h2>
+                </div>
+
+                <div class="card-body p-5">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-4"></div>
+                        <input type="hidden" asp-for="PetId" />
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold" asp-for="PetName"></label>
+                                    <input asp-for="PetName" class="form-control form-control-lg" placeholder="Enter pet name" />
+                                    <span asp-validation-for="PetName" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold" asp-for="AdoptionFee"></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input asp-for="AdoptionFee" type="number" step="0.01"
+                                               class="form-control form-control-lg" placeholder="0.00" />
+                                    </div>
+                                    <span asp-validation-for="AdoptionFee" class="text-danger"></span>
+                                </div>
+
+                                <div class="text-center mt-5">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5 py-3">
+                                        Save Changes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Footer -->
+                <div class="card-footer text-center text-muted py-3">
+                    © 2026 Pet Haven - Because Every Pet Deserves a Happy Ending
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a asp-action="Index" class="btn btn-outline-secondary px-4">
+                    ← Back to Pet List
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

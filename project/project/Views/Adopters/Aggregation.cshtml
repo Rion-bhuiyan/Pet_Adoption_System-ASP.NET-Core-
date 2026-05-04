@@ -1,0 +1,50 @@
+﻿@model IEnumerable<project.Models.Adopter>
+@{
+    ViewData["Title"] = "Aggregation";
+}
+
+<div class="row">
+    <div class="col-4">
+        <h2 class="display-4">Adopter Info</h2>
+        <table class="table table-bordered table-striped table-sm">
+            <thead class="table-primary">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(xx => item.AdopterName)</td>
+                        <td>@Html.DisplayFor(xx => item.Age)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-8">
+        <h2 class="display-4">Aggregation Test</h2>
+        <table class="table table-bordered table-striped table-sm">
+            <thead class="table-primary">
+                <tr>
+                    <th>Total Adopters</th>
+                    <th>Maximum Age</th>
+                    <th>Minimum Age</th>
+                    <th>Total Age Sum</th>
+                    <th>Average Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@ViewBag.count</td>
+                    <td>@ViewBag.max</td>
+                    <td>@ViewBag.min</td>
+                    <td>@ViewBag.sum</td>
+                    <td>@ViewBag.avg</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

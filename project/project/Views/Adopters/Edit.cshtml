@@ -1,0 +1,116 @@
+﻿@model project.Models.ViewModels.AdopterVM
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header text-white text-center py-3" style="background: linear-gradient(135deg,#ff7eb3,#ff758c);">
+            <h3 class="mb-0">Edit Adopter</h3>
+        </div>
+        <div class="card-body p-5">
+            <form id="frmEdit" asp-action="Edit" asp-controller="Adopters" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="AdopterId" />
+                <input type="hidden" asp-for="Picture" />
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label>Name</label>
+                            <input asp-for="AdopterName" class="form-control form-control-lg" />
+                            <span asp-validation-for="AdopterName" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label>Birth Date</label>
+                            <input asp-for="BirthDate" type="date" class="form-control form-control-lg" />
+                            <span asp-validation-for="BirthDate" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label>Age</label>
+                            <input asp-for="Age" type="number" class="form-control form-control-lg" />
+                            <span asp-validation-for="Age" class="text-danger"></span>
+                        </div>
+
+                        @if (!string.IsNullOrEmpty(Model.Picture))
+                        {
+                            <div class="mb-3">
+                                <label>Current Image</label><br />
+                                <img src="@Model.Picture" width="120" height="120" style="border-radius:10px; object-fit:cover;" />
+                            </div>
+                        }
+
+                        <div class="mb-3">
+                            <label>Change Picture</label>
+                            <input asp-for="PictureFile" type="file" class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-check mb-3">
+                            <input asp-for="Maritalstatus" class="form-check-input" />
+                            <label class="form-check-label">Married</label>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg w-100">Update</button>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5>Pet List</h5>
+                            <button type="button" id="btnPlus" class="btn btn-primary btn-sm">+ Add</button>
+                        </div>
+                        <div id="petContainer" class="border p-3 bg-light rounded" style="min-height:200px;"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        function LoadData(id = null) {
+            $.get("/Adopters/AddNewPet", { id: id }, function (data) {
+                $("#petContainer").append(data);
+            });
+        }
+
+        $(document).ready(function () {
+            @if (Model != null && Model.PetList != null && Model.PetList.Any())
+            {
+                    foreach (var id in Model.PetList)
+                    {
+                            @:LoadData(@id);
+                    }
+            }
+            else
+            {
+                    @:LoadData();
+            }
+
+            $("#btnPlus").click(function () {
+                LoadData();
+            });
+
+            $(document).on("click", ".btnDelete", function () {
+                $(this).closest('.pet-row').remove();
+            });
+
+            $("#frmEdit, #frmCreate").submit(function (e) {
+                e.preventDefault();
+
+                var formData = new FormData(this);
+
+                $.ajax({
+                    url: $(this).attr("action"),
+                    type: "POST",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (res) {
+                        if (res === "success") {
+                            window.location.href = "/Adopters/Index";
+                        }
+                    },
+                    error: function (xhr) {
+                        alert("Error: " + xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+}

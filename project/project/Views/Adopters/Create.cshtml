@@ -1,0 +1,147 @@
+﻿@model project.Models.ViewModels.AdopterVM
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="card-header text-white text-center py-4"
+                     style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <h2 class="mb-0 fw-bold">Add New Adopter</h2>
+                </div>
+
+                <div class="card-body p-4 p-md-5 bg-light">
+                    <form id="frmCreate"
+                          asp-action="Create"
+                          asp-controller="Adopters"
+                          data-ajax="true"
+                          data-ajax-method="post"
+                          data-ajax-mode="replace"
+                          data-ajax-update="#msg"
+                          data-ajax-success="success"
+                          enctype="multipart/form-data">
+
+                        @Html.AntiForgeryToken()
+
+                        <div class="row align-items-start">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label asp-for="AdopterName" class="form-label fw-bold small">Adopter Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-info-subtle">
+                                            <i class="bi bi-person-fill text-info"></i>
+                                        </span>
+                                        <input asp-for="AdopterName" class="form-control border-info-subtle" placeholder="Enter name" />
+                                    </div>
+                                    <span asp-validation-for="AdopterName" class="text-danger small"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="BirthDate" class="form-label fw-bold small">Birth Date</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-info-subtle">
+                                            <i class="bi bi-calendar-event text-info"></i>
+                                        </span>
+                                        <input asp-for="BirthDate" id="BirthDate" type="date" class="form-control border-info-subtle" />
+                                    </div>
+                                    <span asp-validation-for="BirthDate" class="text-danger small"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="Age" class="form-label fw-bold small">Age</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-info-subtle">
+                                            <i class="bi bi-hash text-info"></i>
+                                        </span>
+                                        <input asp-for="Age" id="Age" type="number" class="form-control border-info-subtle" placeholder="Age" />
+                                    </div>
+                                    <span asp-validation-for="Age" class="text-danger small"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="PictureFile" class="form-label fw-bold small">Picture</label>
+                                    <input asp-for="PictureFile" type="file" class="form-control border-info-subtle" />
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input asp-for="Maritalstatus" class="form-check-input border-info" />
+                                    <label class="form-check-label fw-bold small" asp-for="Maritalstatus">Married</label>
+                                </div>
+
+                                <button type="submit" class="btn btn-info btn-lg w-100 text-white rounded-pill shadow-sm fw-bold">
+                                    <i class="bi bi-save-fill me-2"></i> Save Adopter
+                                </button>
+                            </div>
+
+                            <div class="col-md-6 ps-md-4 border-start">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="fw-bold text-secondary mb-0">Select Pets</h5>
+                                    <button type="button" id="btnPlus" class="btn btn-info btn-sm rounded-circle text-white shadow-sm">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                                <div id="petContainer" class="p-2" style="min-height:200px;">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div id="msg" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.min.js"></script>
+
+    <script>
+        function success(response) {
+            if (response === "success") {
+                $("#msg").html("<div class='alert alert-success text-center'>Data saved successfully!</div>");
+                setTimeout(function() {
+                    window.location.href = "/Adopters/Index";
+                }, 1000);
+            } else {
+                $("#msg").html("<div class='alert alert-danger text-center'>" + response + "</div>");
+            }
+        }
+
+        function LoadPetRow(id = null) {
+            $.ajax({
+                url: "/Adopters/AddNewPet",
+                type: "GET",
+                data: { id: id },
+                success: function (htmlResponse) {
+                    $("#petContainer").append(htmlResponse);
+                    RebindValidation();
+                }
+            });
+        }
+
+        function RebindValidation() {
+            $("form").removeData("validator").removeData("unobtrusiveValidation");
+            $.validator.unobtrusive.parse("form");
+        }
+
+        $(document).ready(function () {
+            LoadPetRow();
+
+           
+
+            $("#btnPlus").click(function (e) {
+                e.preventDefault();
+                LoadPetRow();
+            });
+
+            $(document).on("click", ".btnDelete", function (e) {
+                e.preventDefault();
+                $(this).closest('.pet-row').remove();
+            });
+        });
+    </script>
+}

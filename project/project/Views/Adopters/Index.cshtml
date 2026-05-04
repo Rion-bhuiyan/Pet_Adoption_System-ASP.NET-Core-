@@ -1,0 +1,92 @@
+﻿@model IEnumerable<project.Models.Adopter>
+@{
+    ViewData["Title"] = "Adopter List";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <h2 class="display-4 text-center mb-4 text-primary fw-bold">Adopter List</h2>
+
+            <div class="d-flex justify-content-end mb-4">
+                <a asp-action="Create" asp-controller="Adopters" class="btn btn-primary shadow-sm px-4">
+                    <i class="bi bi-plus-circle"></i> Add New Adopter
+                </a>
+            </div>
+
+            @foreach (var c in Model)
+            {
+                <div class="card mb-4 shadow border-0 rounded-3 overflow-hidden">
+                    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <img src="@(string.IsNullOrEmpty(c.Picture) ? "/Images/default.png" : c.Picture)"
+                                 width="50" height="50"
+                                 class="rounded-circle me-3 border border-2 border-light shadow-sm"
+                                 style="object-fit: cover;" alt="Adopter" />
+                            <div>
+                                <h5 class="mb-0 fw-bold">@c.AdopterName</h5>
+                                <small class="text-light-50">
+                                    Age: @c.Age | DOB: @c.BirthDate.ToString("dd MMM yyyy") |
+                                    Status: @(c.MaritalStatus ? "Married" : "Single")
+                                </small>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <a asp-action="Edit" asp-controller="Adopters" asp-route-id="@c.AdopterId"
+                               class="btn btn-outline-light btn-sm px-3 me-2 rounded-2">
+                                <i class="bi bi-pencil-square"></i> Edit
+                            </a>
+                            <a asp-action="Delete" asp-controller="Adopters" asp-route-id="@c.AdopterId"
+                               class="btn btn-outline-danger btn-sm px-3 rounded-2"
+                               onclick="return confirm('Are you sure you want to delete this adopter?')">
+                                <i class="bi bi-trash"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card-body bg-light">
+                        <div class="px-2">
+                            <h6 class="fw-bold text-secondary mb-3">
+                                <i class="bi bi-paws me-2"></i>Adopted Pets
+                            </h6>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover bg-white mb-0 shadow-sm">
+                                    <thead class="table-secondary">
+                                        <tr>
+                                            <th class="ps-3">Pet Name</th>
+                                            <th>Adoption Fee</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (c.AdoptionEntries != null && c.AdoptionEntries.Any())
+                                        {
+                                            foreach (var item in c.AdoptionEntries)
+                                            {
+                                                <tr>
+                                                    <td class="ps-3 fw-medium">
+                                                        @(item.Pet != null ? item.Pet.PetName : "Not Assigned")
+                                                    </td>
+                                                    <td>
+                                                        @(item.Pet != null ? item.Pet.AdoptionFee.ToString("C") : "N/A")
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <tr>
+                                                <td colspan="2" class="text-center text-muted py-3">
+                                                    <i class="bi bi-exclamation-circle me-1"></i> No pets adopted yet.
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
