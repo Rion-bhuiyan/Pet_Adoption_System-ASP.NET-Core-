@@ -1,48 +1,50 @@
-Master-Detail CRUD Application | ASP.NET Core 
-This repository contains a robust implementation of a Master-Detail CRUD interface developed with ASP.NET Core MVC. The project focuses on handling complex relational data while maintaining a clean architecture and smooth user experience.
+This repository features a professional implementation of a Master-Detail CRUD interface using ASP.NET Core MVC. The project is designed to manage complex relational data structures while focusing on Clean Architecture and a High-Performance User Experience.
 
-Technical Implementations
-Based on the project requirements outlined in image_55893c.png, the following features were implemented:
+🚀 Technical Implementations
+The following core functionalities were implemented based on the project requirements:
 
 1. Data Architecture & Persistence
-Code First Approach: Utilized Entity Framework Core to design and manage the database schema directly through C# classes.
+Code First Approach: Utilized Entity Framework Core to architect and manage the database schema directly through C# classes.
 
-Relational Data Management: Seamlessly handled One-to-Many relationships, ensuring data integrity across Master and Detail records.
+Relational Data Management: Engineered seamless One-to-Many relationships, ensuring strict data integrity between Master and Detail records.
 
-Diverse Data Types: Integrated support for various data formats, including text, numeric values, booleans, and date pickers.
+Diverse Data Handling: Integrated support for multiple data formats including Text, Numeric values, Booleans, and Date pickers.
 
-Image Uploading: Implemented file handling for storing and displaying images within the application.
+Image Processing: Built a robust file-handling system for Uploading and Displaying Images within the application.
 
-2. Frontend & User Experience
-AJAX Integration: Dynamic CRUD operations are performed via AJAX to provide a seamless, no-reload experience for the user.
+2. Advanced Frontend & UX
+AJAX Driven UI: Implemented Dynamic CRUD operations via AJAX to ensure a smooth, Zero-Reload user experience.
 
-View Components & Partial Views: Leveraged modular UI components to keep the code DRY (Don't Repeat Yourself) and maintainable.
+Modular Design: Leveraged View Components and Partial Views to maintain a DRY (Don't Repeat Yourself) and highly maintainable codebase.
 
-View Models: Used dedicated ViewModels to decouple the domain models from the UI layer, ensuring secure and precise data transfer.
+Architectural Decoupling: Used dedicated ViewModels to separate the UI layer from Domain Models, ensuring Secure and Precise data transfer.
 
-3. Security & Logic
-Data Annotations: Applied comprehensive validation logic at the model level to ensure data quality and provide instant feedback to users.
+3. Security & Application Logic
+Model Validation: Applied Comprehensive Data Annotations for strong server-side and client-side validation.
 
-Authentication & Authorization: Integrated identity management to control access and secure sensitive routes.
+Access Control: Integrated Authentication & Authorization logic to secure sensitive routes and manage user roles.
 
-Custom Routing: Configured specialized routing paths to make URLs more intuitive and SEO-friendly.
+URL Optimization: Configured Custom Routing to create intuitive, SEO-friendly, and readable URL structures.
 
-Technology Stack
+🛠 Technology Stack
 Backend: ASP.NET Core, EF Core
 
 Database: MS SQL Server
 
 Frontend: Bootstrap, jQuery, AJAX
 
-Patterns: MVC, ViewModel, Repository Pattern
+Design Patterns: MVC, ViewModel, Repository Pattern
 
-Getting Started
-Clone the Repo:
-git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
+📥 Getting Started
+Clone the Repository:
 
-Database Setup: Update the ConnectionStrings in appsettings.json.
+Bash
+git clone https://github.com/Rion-bhuiyan/Pet_Adoption_System-ASP.NET-Core-
+Database Configuration: Update the ConnectionStrings in the appsettings.json file.
 
-Run Migrations:
-Open Package Manager Console and run Update-Database.
+Apply Migrations:
+Execute the following command in the Package Manager Console:
 
-Launch: Press F5 or use dotnet run to start the application.
+PowerShell
+Update-Database
+Run Application: Press F5 in Visual Studio or use dotnet run in your terminal.
