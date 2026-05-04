@@ -1,4 +1,4 @@
-This repository features a professional implementation of a Master-Detail CRUD interface using ASP.NET Core MVC. The project is designed to manage complex relational data structures while focusing on Clean Architecture and a High-Performance User Experience.
+This repository features a professional implementation of a Master-Detail CRUD interface using ASP.NET Core. The project is designed to manage complex relational data structures while focusing on Clean Architecture and a High-Performance User Experience.
 
 🚀 Technical Implementations
 The following core functionalities were implemented based on the project requirements:
@@ -8,9 +8,9 @@ Code First Approach: Utilized Entity Framework Core to architect and manage the 
 
 Relational Data Management: Engineered seamless One-to-Many relationships, ensuring strict data integrity between Master and Detail records.
 
-Diverse Data Handling: Integrated support for multiple data formats including Text, Numeric values, Booleans, and Date pickers.
+Diverse Data Handling: Integrated support for multiple data formats, including Text, Numeric values, Booleans, and Date pickers.
 
-Image Processing: Built a robust file-handling system for Uploading and Displaying Images within the application.
+Image Processing: Built a robust file-handling system for uploading and Displaying Images within the application.
 
 2. Advanced Frontend & UX
 AJAX Driven UI: Implemented Dynamic CRUD operations via AJAX to ensure a smooth, Zero-Reload user experience.
